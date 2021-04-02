@@ -1,0 +1,454 @@
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 36px;
+}
+h3{
+	font-size: 24px;
+}
+h4,h5,h6{
+	font-size: 16px;
+}
+body {
+ font-family: "Noto Sans JP"; 
+}
+.header-top{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.top-text{
+	padding-left: 20px;
+}
+.menu-nav{
+	padding-top: 10px;
+}
+.menu-nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+.menu-nav ul li{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 13px;
+}
+
+.header-top.slider{
+	animation-name: menu_top_fadein;
+	animation-duration: 2s;
+	top: 0;
+	position: fixed;
+
+	z-index: 10;
+	background-color: #ffffff;
+    width: 100%;
+
+}
+.header-top.hidden{
+	position: absolute;
+	animation-name: menu_scroll_top_fadeOut;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+.menu-nav-scroll{
+}
+.scroll-icon{
+	width: 70px;
+	height: 70px;
+
+}
+.menu-nav-scroll{
+
+}
+.header-scroll-contents-box{
+	display: flex;
+}
+.header-scroll-contents-box li{
+	list-style: none;
+}
+.menu-nav-scroll{
+	position: absolute;
+	width: 100%;
+
+}
+.menu-nav-scroll ul{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	max-width: 600px;
+	padding-top: 20px;
+	margin: 0 auto;
+}
+.background-size{
+	width: 100%;
+	height: 80vh;
+	background-size: cover;
+}
+.background-size.animated{
+	animation-name: BackgroundImageMoveToRight;
+	animation-duration: 40s;
+}
+/*.background-size.fadeout{
+	animation-name: BackgroundFadeOut;
+	animation-duration: 1s;
+}*/
+.background-animation-top-box{
+	display: flex;
+}
+#background-1-image{
+	background-image: url("background1.jpg");
+}
+#background-2-image{
+	background-image: url("background2.jpg");
+
+}
+.scroll-article{
+	position: absolute;
+	width: 100%;
+	left: -100%;
+
+}
+.scroll-article.move{
+	animation-name: BackgroundMoveGo;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+}
+.background-animation-top-box{
+	overflow: hidden;
+	animation-name: FadeIn;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	position: relative;
+}
+#scroll-article-0{
+	left: 0;
+}
+.scroll-article-set{
+	position: absolute;
+	width: 100%;
+}
+.back-black-box{
+	width: 100%;
+	height: 80vh;
+}
+.back-black-box:before{
+	position: absolute;
+	z-index: 1;
+	opacity: 0.4;
+	background-color: #000000;
+	width: 100%;
+	content: "";
+	height: 80vh;
+}
+.background-size-set{
+	width: 100%;
+	height: 80vh;
+	background-size: cover;
+	background-image: url("background1.jpg");
+}
+.background-display-font-box{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 600px;
+	z-index: 3;
+	left: 0;
+	right: 0;
+	position: absolute;
+	text-align: center;
+	color: #ffffff;
+	bottom: 0;
+	animation-name: ContentsUpAnimation;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+.icon-top-box{
+	position: absolute;
+	text-align: center;
+	z-index: 3;
+	margin: auto;
+	top: 10vh;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	animation-name: FadeIn;
+	animation-duration: 2s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.space-1{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	letter-spacing: 5px;
+}
+.contents-box{
+	padding-top: 100px;
+}
+.space-p{
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+.text-center{
+	text-align: center;
+}
+
+.video-start-box{
+	margin-top: 100px;
+	background-size: cover;
+	background-color: #000000;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.video-start-box::before{
+}
+.video-png{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	opacity: 0.7;
+}
+.movieEvent{
+	height: 100%;
+	max-width: 200px;
+	opacity: 1;
+	user-select: none;
+}
+.movieEvent::before{
+	position: absolute;
+	width: 10vh;
+	height: 10vh;
+	border: 2px solid #ffffff;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	right: 0;
+    top: 50%;
+	border-radius: 50%;
+	content: "";
+	background-image: url("play.png");
+	background-size: cover;
+	cursor: pointer;
+	padding: 10px;
+}
+.story-text{
+	font-size: 17px;
+	letter-spacing: 5px;
+}
+.modal{
+	display: none;
+}
+.modal.hidden{
+
+}
+.modal-content{
+	left: 50%;
+	position: absolute;
+	z-index: 9999;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	width: 100%;
+	text-align: center;
+}
+.modal.hide{
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+    background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.modal-close{
+	width: 100%;
+	height: 100%;
+}
+.youtube-container{
+	width: 800px;
+	height: 400px;
+
+}
+.youtube-container.hide{
+	animation-name: FadeIn;
+	animation-duration: 1s;
+}
+.youtube-container{
+	/*animation-name: FadeOut;*/
+	/*animation-duration: 1s;*/
+	/*animation-fill-mode: forwards;*/
+}
+.logo_black_image{
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+.perpanep-desciption-box{
+	text-align: center;
+}
+.hover-big:hover{
+	transform: scale(1.01, 1.01);
+	opacity: 0.8;
+}
+.hover-big:hover::before{
+}
+.hover-big{
+	transition: 0.8s;
+}
+.fade_in_box.contents_up_and_fadeIn{
+	animation-name: contents_up_and_fadeIn;
+	animation-duration: 2s;
+	animation-play-state: forwards;
+	opacity: 1;
+
+}
+.start-contents-box{
+	animation-name: contents_up_and_fadeIn;
+	animation-duration: 2s;
+	animation-play-state: forwards;
+}
+.fade_in_box{
+	opacity: 0;
+}
+.header-scroll-top{
+	display: flex;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	background-color: #ffffff;
+	top: -100px;
+	transition: 1s;
+}
+.header-scroll-top.hide{
+	top: 0;
+}
+
+.story-text{
+	position: relative;
+	padding-bottom: 80px;
+    margin: 0 auto;
+    max-width: 100px;
+}
+.story-contents-box{
+	padding-bottom: 80px;
+}
+.story-text::before{
+	content: "";
+	width: 70px;
+	height: 2px;
+	background-color: #000000;
+	position: absolute;
+	top: 20px;
+}
+.story-box{
+	padding-top: 70px;
+
+	padding-bottom: 50px;
+}
+.story-contents-image{
+	width: 114px;
+	height: 80px;
+}
+.story-contents-box{
+	display: flex;
+}
+.story-box{
+	padding-bottom: 100px;
+	margin: 0 auto;
+	max-width: 650px;
+	padding-left: 50px;
+}
+.story-sentence-box{
+    padding-left: 70px;
+}
+
+@keyframes menu_scroll_top_fadeIn{
+	100%{
+		top: 0;
+	}	
+}
+@keyframes menu_scroll_top_fadeOut{
+	100%{
+		top: -100px;
+	}	
+}
+@keyframes menu_top_fadein{
+	0%{
+		transform: translateY(-100px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+@keyframes contents_up_and_fadeIn{
+	0%{
+		transform: translateY(70px);
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+
+	}
+}
+@keyframes ContentsUpAnimation{
+	0%{
+		opacity: 0;
+		top: 90vh;
+	}
+	100%{
+		opacity: 1;
+		top: 70vh;
+	}
+}
+
+@keyframes BackgroundFadeOut{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes FadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes FadeOut{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes BackgroundImageMoveToRight{
+	100%{
+		transform: translateX(-70px);
+	}
+}
+
+@keyframes BackgroundMoveGo{
+	0%{
+		opacity: 0;
+		left: -100%;
+	}
+	100%{
+		opacity: 1;
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.youtube-container{
+		width: 100%;
+		height: 35vh;
+	}
+}
